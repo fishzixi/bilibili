@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array.prototype.suiyiSome = function(callback){
+        //     for(var i =0;i<this.length;i++){
+        //         // callback(this);
+        //         if(callback(this[i])){
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }
+        // var fn = function(value){
+        //     return value > 10;
+        // }
+        // var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+        // arr.suiyiSome(fn);
+        // console.log(arr.suiyiSome(fn));
+        // Object.prototype.marge=function(callback){
+        // }
+        function merge(obj1,obj2){
+            var res = {};
+            for(key in obj1) {
+                for(k in obj2){
+                    if(key===k){
+                        if(typeof obj1[key]==="object"){
+                            res[k]=merge(obj1[key],obj2[k]);
+                            console.log(res[k])
+                        }
+                        res[k]=obj2[k];
+                        console.log(res[k])
+                    }else{
+                        res[key]=obj1[key];
+                        res[k]=obj2[k];
+                    }
+                }
+            }
+            return res;
+        }
+        // console.log(merge({a:1,b:2},{a:2,c:3}))
+        // console.log(merge({a:1,b:2,d:4},{a:2,c:3}))
+        console.log(merge({a: 1,b:2,d:4,f: {a: 123,b: 234}},{a:2,c: 3, f: {a: false, c: "def"}}))
+        // console.log(merge({a: 1,b:2,d:4,f: {a: 123,b: 234}},{a:2,c: 3}))
+
+        function kuaipai(arr,target){
+            var left = -1;
+            var right = arr.length;
+            for(i=0;i<right;i++){
+                if(arr[i]<target){
+                    left++;
+                    var temp = arr[i];
+                    arr[i]=arr[left];
+                    arr[left]=temp;
+                    
+                }else if(arr[i]>target){
+                    right--;
+                    var t = arr[i];
+                    arr[i]=arr[right];
+                    arr[right]=t;
+                    i--;
+                }
+            }
+            return arr.sort(function(a,b){
+                return a-b;
+            });
+            
+            
+        }
+        console.log(kuaipai([1,15,13,8,16,7],12))
+        console.log(kuaipai([1,15,13,[15,18,28],8,16,7],12))
+        
+        //[1, 7, 8, 16, 13, 15]
+
+
+        // right 的初始值是 arr.length，即 6。
+        // arr.length 在循环中是固定的，不会改变。
+        // right 会随着大于目标值的元素被交换到数组末尾而减少，
+        // 但循环条件仍然是 i < arr.length，这导致最后的分区不正确。
+        var a = {b:2};
+        a={a:"b"}
+        console.log(a);
+
+    </script>
+</body>
+</html>

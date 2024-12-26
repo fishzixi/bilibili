@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Document</title>
+    <link rel="stylesheet" href="bilibili.css">
+</head>
+
+<body>
+    <svg style="display:none">
+        <symbol id="icon-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M15.553 15.553a7.06 7.06 0 1 0-9.985-9.985a7.06 7.06 0 0 0 9.985 9.985m0 0L20 20" />
+        </symbol>
+        <symbol id="icon-bilibili" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect width="35.733" height="26.558" x="6.134" y="9.403" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" rx="6.753"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m17.483 4.5l2.925 4.903m-7.149 12.282l6.824-2.726M30.517 4.5l-2.925 4.903m7.149 12.282l-6.824-2.726m1.137 5.957c-.582 1.472-1.15 2.54-2.527 2.54c-1.074 0-1.666-.498-2.527-1.836c-.861 1.338-1.453 1.836-2.527 1.836c-1.377 0-1.945-1.068-2.527-2.54m7.022 11.045v2.033s8.691.29 8.691 5.506H13.341c0-5.217 8.691-5.506 8.691-5.506v-2.033"/></symbol>
+        <symbol  id ="icon-down-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="m7 10l5 5l5-5" />
+        </symbol >
+        <symbol id="icon-up-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M11.512 8.43a.75.75 0 0 1 .976 0l7 6a.75.75 0 1 1-.976 1.14L12 9.987l-6.512 5.581a.75.75 0 1 1-.976-1.138z" clip-rule="evenodd"/></symbol>
+        <symbol id="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="currentColor"><path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/></g></symbol>
+        <symbol id="icon-comments" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="currentColor" d="M3 6v20h9.563l2.718 2.72l.72.686l.72-.687L19.437 26H29V6zm2 2h22v16h-8.406l-.313.28L16 26.563l-2.28-2.28l-.314-.282H5zm4 3v2h14v-2zm0 4v2h14v-2zm0 4v2h10v-2z"/></symbol>
+    </svg>
+    <div class="topFix">
+        <div class="top">
+            <div class="logo">
+                <a href="">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="top-r">
+                <div class="search">
+                    <svg width="6vmin" height="6vmin" style="margin-top: 2.25vmin; color: rgb(157, 157, 157);">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                </div>
+                <div class="biliicon">
+                    <svg width="5vmin" height="5vmin" style="margin: 1vmin 0;">
+                        <use xlink:href="#icon-bilibili"></use>
+                    </svg>
+                </div>
+                <div class="login"></div>
+                <div class="download">下载APP</div>
+            </div>
+        </div>
+    
+    <!-- 头部结束 -->
+     <!-- 导航开始 -->
+        <div class="nav">
+            <div class="nav-t">
+                <ul>
+
+                </ul>
+                <div class="icon-up-arrow">
+                    <svg width="5vmin" height="5vmin">
+                        <use xlink:href="#icon-up-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="nav-l">
+                <ul>
+                    <!-- 导航栏滑动块 -->
+                    <div class="nav-slide"></div>
+                </ul>
+            </div>
+            <div class="nav-r">
+                <svg width="5vmin" height="5vmin">
+                    <use xlink:href="#icon-down-arrow"></use>
+                </svg>
+            </div>
+        </div>
+        
+    </div>
+    <!-- 导航结束 -->
+    <!-- 主体开始 -->
+     <div class="Main">
+        <div class="main">
+            
+        </div>
+        <div class="more">去哔哩哔哩看更多</div>
+        
+    </div>
+    <div class="jump">
+        点击跳转到bilibili首页
+    </div>
+
+    <!-- 主体结束 -->
+
+    <script src="index.js"></script>
+    <script src="bili.js"></script>
+</body>
+
+</html>
